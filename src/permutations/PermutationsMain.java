@@ -2,6 +2,7 @@ package permutations;
 
 public class PermutationsMain {
 	public static void main(String[] args) {
-		System.out.println("hello");
+		Permutations permutations = new Permutations("walk");
+		System.out.println(permutations);
 	}
 }
