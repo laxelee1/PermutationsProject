@@ -1,0 +1,5 @@
+# Ignore output directory
+/out/
+
+# Ignore .class files
+*.class
