@@ -6,4 +6,8 @@ public class Permutations {
 	public Permutations(String word) {
 		this.word = word;
 	}
+
+	public String toString() {
+		return this.word;
+	}
 }
