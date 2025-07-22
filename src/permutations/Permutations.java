@@ -1,5 +1,7 @@
 package permutations;
 
+import java.util.ArrayList;
+
 public class Permutations {
 	private String initWord;
 
