@@ -1,13 +1,13 @@
 package permutations;
 
 public class Permutations {
-	private String word;
+	private String initWord;
 
-	public Permutations(String word) {
-		this.word = word;
+	public Permutations(String intWord) {
+		this.initWord = initWord;
 	}
 
 	public String toString() {
-		return this.word;
+		return this.initWord;
 	}
 }
