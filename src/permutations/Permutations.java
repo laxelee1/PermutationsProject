@@ -3,7 +3,7 @@ package permutations;
 public class Permutations {
 	private String initWord;
 
-	public Permutations(String intWord) {
+	public Permutations(String initWord) {
 		this.initWord = initWord;
 	}
 
