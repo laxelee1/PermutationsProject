@@ -11,12 +11,16 @@ public class Permutations {
 		this.initWord = initWord;
 		this.words = new ArrayList<String>();
 		// added the word array list
+		dfs(6);
 	}
 
 	public String toString() {
 		return this.initWord;
 	}
 
-	private void dfs() {
+	private void dfs(int i) {
+		// recursive helper function to create the permutations
+		System.out.printf("int i is %d%n",i);
+
 	}
 }
