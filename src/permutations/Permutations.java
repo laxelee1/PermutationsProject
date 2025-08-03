@@ -16,4 +16,7 @@ public class Permutations {
 	public String toString() {
 		return this.initWord;
 	}
+
+	private void dfs() {
+	}
 }
