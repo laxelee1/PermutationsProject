@@ -18,13 +18,29 @@ public class Permutations {
 	}
 
 	public String toString() {
-		return this.initWord;
+		return "initWord is " + this.initWord;
 	}
 
 	private void dfs(boolean[] used) {
 		// recursive helper function to create the permutations
-		for(int i = 0; i < used.length; i++) {
-			System.out.printf("index %d of used = %b%n", i, used[i]);
+
+		System.out.println();
+		for (int i = 0; i < used.length; i++) {
+			System.out.printf("used[%d] = %b | ", i, used[i]);
+		}
+		System.out.println();
+
+		// add a check to see if any of used is true. this will eventually change to a check for all of used is true
+		for (int i = 0; i < used.length; i++) {
+			if (used[i]) {
+				return;
+			}
+		}
+
+		for (int i = 0; i < used.length; i++) {
+			used[i] = true;
+			dfs(used);
+			used[i] = false;
 		}
 	}
 }
