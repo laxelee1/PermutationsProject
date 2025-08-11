@@ -14,27 +14,34 @@ public class Permutations {
 		this.words = new ArrayList<>();
 		// added the word array list
 		boolean[] used = new boolean[n];
-		dfs(used);
+		String curWord = "";
+		dfs(used, curWord);
+		System.out.println("words = " + words);
 	}
 
 	public String toString() {
 		return "initWord is " + this.initWord;
 	}
 
-	private void dfs(boolean[] used) {
+	private void dfs(boolean[] used, String curWord) {
 		// recursive helper function to create the permutations
 
-		System.out.println();
-		for (int i = 0; i < used.length; i++) {
-			System.out.printf("used[%d] = %b | ", i, used[i]);
-		}
-		System.out.println();
+		// System.out.println();
+		// for (int i = 0; i < used.length; i++) {
+		// 	System.out.printf("used[%d] = %b | ", i, used[i]);
+		// }
+		// System.out.println();
 
 		// add a check to see if any of used is true. this will eventually change to a check for all of used is true
+		int total = 0;
 		for (int i = 0; i < used.length; i++) {
 			if (used[i]) {
-				return;
+				total++;
 			}
+		}
+		if (total == n) {
+			words.add(curWord);
+			return;
 		}
 
 		for (int i = 0; i < used.length; i++) {
@@ -42,7 +49,8 @@ public class Permutations {
 				continue;
 			}
 			used[i] = true;
-			dfs(used);
+			String nextWord = curWord + initWord.charAt(i); // I'm not sure about this line yet
+			dfs(used, nextWord);
 			used[i] = false;
 		}
 	}
