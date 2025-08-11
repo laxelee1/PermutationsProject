@@ -32,7 +32,7 @@ public class Permutations {
 		// }
 		// System.out.println();
 
-		// add a check to see if any of used is true. this will eventually change to a check for all of used is true
+		// check to see if all of used is true
 		int total = 0;
 		for (int i = 0; i < used.length; i++) {
 			if (used[i]) {
