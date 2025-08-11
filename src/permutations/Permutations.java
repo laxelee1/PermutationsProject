@@ -12,7 +12,6 @@ public class Permutations {
 		this.n = initWord.length();
 		this.initWord = initWord;
 		this.words = new ArrayList<>();
-		// added the word array list
 		boolean[] used = new boolean[n];
 		String curWord = "";
 		dfs(used, curWord);
@@ -48,7 +47,7 @@ public class Permutations {
 				continue;
 			}
 			used[i] = true;
-			String nextWord = curWord + initWord.charAt(i); // I'm not sure about this line yet
+			String nextWord = curWord + initWord.charAt(i);  
 			dfs(used, nextWord);
 			used[i] = false;
 		}
