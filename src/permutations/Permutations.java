@@ -16,11 +16,10 @@ public class Permutations {
 		boolean[] used = new boolean[n];
 		String curWord = "";
 		dfs(used, curWord);
-		System.out.println("words = " + words);
 	}
 
 	public String toString() {
-		return "initWord is " + this.initWord;
+		return "initWord is " + initWord + "\n" + "words = " + words;
 	}
 
 	private void dfs(boolean[] used, String curWord) {
