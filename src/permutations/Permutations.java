@@ -38,6 +38,9 @@ public class Permutations {
 		}
 
 		for (int i = 0; i < used.length; i++) {
+			if (used[i] == true) {
+				continue;
+			}
 			used[i] = true;
 			dfs(used);
 			used[i] = false;
